@@ -1,0 +1,277 @@
+:root {
+  --bg: #0b1020;
+  --panel: #111933;
+  --panel-soft: #131d3b;
+  --text: #e8ecff;
+  --muted: #aab6e8;
+  --primary: #7b5cff;
+  --primary-2: #20d0ff;
+  --border: #24315f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top right, #1b2660, var(--bg) 48%);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(11, 16, 32, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+nav {
+  display: flex;
+  gap: 1.2rem;
+}
+
+nav a,
+.brand,
+.site-footer a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.hero {
+  padding: 4rem 0 3rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+}
+
+.pill {
+  display: inline-block;
+  font-size: 0.85rem;
+  background: rgba(123, 92, 255, 0.25);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(123, 92, 255, 0.55);
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin: 0.8rem 0;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin: 1.4rem 0;
+}
+
+.btn {
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: white;
+  background: linear-gradient(90deg, var(--primary), var(--primary-2));
+}
+
+.btn-secondary {
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+.btn-ghost {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.stats {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 1.4rem;
+  margin-top: 1.4rem;
+}
+
+.stats li {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats strong {
+  font-size: 1.3rem;
+}
+
+.stats span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.hero-card,
+.card,
+.price-card,
+details {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+.hero-card {
+  padding: 1.3rem;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.new-price {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.full {
+  width: 100%;
+}
+
+.section-head {
+  margin-bottom: 1rem;
+}
+
+.products,
+.pricing,
+.faq {
+  padding: 2.5rem 0;
+}
+
+.grid,
+.price-grid,
+.feature-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card,
+.price-card,
+details {
+  padding: 1rem;
+}
+
+.card a {
+  color: #8dc7ff;
+}
+
+.features {
+  padding: 3rem 0;
+  background: rgba(255, 255, 255, 0.02);
+  border-block: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.feature-grid {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.price-grid {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.price-card .price {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 800;
+}
+
+.price-card ul {
+  padding-left: 1rem;
+  color: var(--muted);
+}
+
+.price-card.active {
+  outline: 2px solid rgba(123, 92, 255, 0.9);
+  transform: translateY(-4px);
+}
+
+.tag {
+  font-size: 0.8rem;
+  color: #131d3b;
+  background: #dbd2ff;
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border-radius: 0.4rem;
+}
+
+details {
+  margin-bottom: 0.7rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-wrap {
+  padding: 1rem 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 860px) {
+  nav {
+    display: none;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
